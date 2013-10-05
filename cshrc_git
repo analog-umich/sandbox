@@ -1,0 +1,47 @@
+#!/bin/csh -f
+
+# NAME
+git config --global user.name "fredenbu"
+
+#EMAIL
+git config --global user.email "fredenbu@umich.edu"
+
+#PASSWORDS and PASSWORD TIMEOUT
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+
+
+# Look here for setting up ssh keys
+# https://help.github.com/articles/generating-ssh-keys
+
+		# Lists the files in your .ssh directory
+		# cd ~/.ssh
+		# ls
+
+
+	# Creates a new ssh key, using the provided email as a label
+	# Generating public/private rsa key pair.
+	# Enter file in which to save the key (/home/you/.ssh/id_rsa): do not use id_rsa
+
+		# ssh-keygen -t rsa -C "your_email@example.com" <name file id_rsa_git
+		# ssh-add id_rsa_git
+		# copy ~/.ssh/id_rsa_git.pub to the authorized keys in git browser window
+
+
+# Example for setting up your own
+
+		#touch README.md
+		#git init
+		#git add README.md
+		#git commit -m "first commit"
+		#git remote add origin git@github.com:fredenbu/sandbox.git
+		#git push -u origin master
+
+
+
+
+# example of how to link to existing one
+
+		# creates a clone of the repo in the directory ./<reponame>
+		# git clone git@github.com:<account>/sandbox.git
+
